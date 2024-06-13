@@ -4,7 +4,7 @@ import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
-    <div className="grid grid-cols-[16%_83%] bg-[#F4F7FE]">
+    <div className="grid grid-cols-[290px_1550px] bg-[#F4F7FE] gap-5">
       <Nav />
       <Dashboard />
     </div>

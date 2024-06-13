@@ -4,59 +4,57 @@ import Chart from "react-apexcharts";
 const AreaChart = () => {
   const options = {
     chart: {
-      id: "area-chart",
+      id: "column-chart",
+      stacked: true,
       toolbar: { show: false },
     },
     plotOptions: {
       bar: {
-        horizontal: false,
-        columnWidth: "10px",
-        borderRadius: 5,
+        columnWidth: "14px",
+        borderRadius: 7,
+        borderRadiusApplication: "end",
       },
     },
     xaxis: {
-      tickPlacement: "on",
-      categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB", "MAR"],
+      categories: ["00", "04", "08", 12, 14, 16, 18],
       axisTicks: { show: false },
       labels: {
         offsetY: 6,
         style: {
-          colors: "#A3AED0",
+          colors: "#B0BBD5",
           fontSize: 12,
-          fontWeight: "normal",
+          fontWeight: "bold",
         },
       },
       axisBorder: { show: false },
     },
     yaxis: {
       min: 0,
-      max: 180,
+      max: 20,
       tickAmount: 2,
       show: false,
     },
-    dataLabels: { enabled: false },
-    stroke: {
-      curve: "smooth",
-      width: 3,
-      lineCap: "round",
-    },
     fill: {
-      type: "solid",
-      opacity: 0,
+      type: "gradient",
+      gradient: {
+        shape: "light",
+        type: "vertical",
+        gradientToColors: ["#4318FF"],
+        opacityFrom: 1,
+        opacityTo: 0.28,
+        stops: [0, 100],
+      },
     },
+    dataLabels: { enabled: false },
     legend: { show: false },
     grid: { show: false },
-    colors: ["#4318FF", "#6AD2FF"],
+    colors: ["#4318FF"],
   };
 
   const series = [
     {
-      name: "Series1",
-      data: [90, 95, 85, 108, 83, 115, 110],
-    },
-    {
-      name: "Series2",
-      data: [50, 70, 40, 70, 60, 70, 67],
+      name: "Values",
+      data: [14, 10, 18, 12, 16, 20, 6],
     },
   ];
 
@@ -67,9 +65,9 @@ const AreaChart = () => {
           <Chart
             options={options}
             series={series}
-            type="area"
-            width="600"
-            height="250"
+            type="bar"
+            width="350"
+            height="220"
           />
         </div>
       </div>
