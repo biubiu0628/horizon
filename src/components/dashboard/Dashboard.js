@@ -1,31 +1,34 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Stat from "../images/dashboard/stat.svg";
-import Dola from "../images/dashboard/dola.svg";
-import Tick from "../images/dashboard/tick.svg";
-import Tick2 from "../images/dashboard/tick2.svg";
-import Doc from "../images/dashboard/doc.svg";
-import Flag from "../images/dashboard/flag.svg";
-import Down from "../images/dashboard/down.svg";
-import Down2 from "../images/dashboard/down2.svg";
-import Up from "../images/dashboard/up.svg";
-import CalendarImage from "../images/dashboard/calendar.svg";
-import Ellipsis from "../images/dashboard/ellipsis.svg";
-import Check from "../images/dashboard/check.svg";
-import Cancel from "../images/dashboard/cancel.svg";
-import Error from "../images/dashboard/error.svg";
-import CheckBox from "../images/dashboard/checkbox.svg";
-import Indicator from "../images/dashboard/indicator.svg";
-import Fire from "../images/dashboard/fire.svg";
-import Timer from "../images/dashboard/timer.svg";
-import Video from "../images/dashboard/video.svg";
-import Avatars from "../images/dashboard/avatars.svg";
-import Avatar1 from "../images/dashboard/avatar1.svg";
-import Avatar2 from "../images/dashboard/avatar2.svg";
-import Avatar3 from "../images/dashboard/avatar3.svg";
-import FingerPrint from "../images/dashboard/fingerprint.svg";
-import Add from "../images/dashboard/add.svg";
-import Vert from "../images/dashboard/vert.svg";
+import Header from "../Header";
+import Stat from "../../images/dashboard/stat.svg";
+import Dola from "../../images/dashboard/dola.svg";
+import Tick from "../../images/dashboard/tick.svg";
+import Tick2 from "../../images/dashboard/tick2.svg";
+import Doc from "../../images/dashboard/doc.svg";
+import Flag from "../../images/dashboard/flag.svg";
+import Down from "../../images/dashboard/down.svg";
+import Down2 from "../../images/dashboard/down2.svg";
+import Up from "../../images/dashboard/up.svg";
+import CalendarImage from "../../images/dashboard/calendar.svg";
+import Ellipsis from "../../images/dashboard/ellipsis.svg";
+import Check from "../../images/dashboard/check.svg";
+import Cancel from "../../images/dashboard/cancel.svg";
+import Error from "../../images/dashboard/error.svg";
+import CheckBox from "../../images/dashboard/checkbox.svg";
+import Indicator from "../../images/dashboard/indicator.svg";
+import Fire from "../../images/dashboard/fire.svg";
+import Timer from "../../images/dashboard/timer.svg";
+import Video from "../../images/dashboard/video.svg";
+import Avatars from "../../images/dashboard/avatars.svg";
+import Avatar1 from "../../images/dashboard/avatar1.svg";
+import Avatar2 from "../../images/dashboard/avatar2.svg";
+import Avatar3 from "../../images/dashboard/avatar3.svg";
+import FingerPrint from "../../images/dashboard/fingerprint.svg";
+import Add from "../../images/dashboard/add.svg";
+import Vert from "../../images/dashboard/vert.svg";
+import Starbuck from "../../images/dashboard/starbuck.svg";
+import Watch from "../../images/dashboard/watch.svg";
+import Fastfood from "../../images/dashboard/fastfood.svg";
 import AreaChart from "./AreaChart";
 import ColumnChart from "./ColumnChart";
 import ColumnChart2 from "./ColumnChart2";
@@ -90,7 +93,7 @@ const Task = ({ nameTask }) => {
           {nameTask}
         </p>
       </div>
-      <img src={Indicator} alt="indicator" />
+      <img src={Indicator} alt="indicator" className="cursor-pointer" />
     </div>
   );
 };
@@ -104,28 +107,16 @@ const Info = ({ image, name, job }) => (
         <span className="text-[12px] font-medium text-[#A3AED0]">{job}</span>
       </p>
     </div>
-    <img src={Vert} alt="" />
+    <img src={Vert} alt="" className="cursor-pointer" />
   </div>
 );
 
 const Dashboard = () => {
   return (
     <div>
-      <div className="grid grid-cols-[repeat(4,25%)] grid-rows-[70px_97px_repeat(4,345px)] py-8 gap-2">
-        <div className="col-span-2">
-          <p className="flex flex-col">
-            <span className="text-[14px] text-[#707EAE]">
-              Pages / Dashboard
-            </span>
-            <span className="text-[30px] font-bold text-[#2B3674]">
-              Main Dashboard
-            </span>
-          </p>
-        </div>
-        {/* header */}
-        <div className="place-self-end col-span-2">
-          <Header />
-        </div>
+      {/* header */}
+      <Header name="Dashboard" name2="Main Dashboard" />
+      <div className="grid grid-cols-[repeat(4,24.6%)] grid-rows-[97px_repeat(4,345px)] py-4 gap-2">
         {/* h1c1 */}
         <div className="grid grid-cols-3 gap-2 col-span-2">
           {/* 1 */}
@@ -479,9 +470,9 @@ const Dashboard = () => {
         <div className="bg-white rounded-[20px] p-6">
           <div className="flex justify-between items-center">
             <p className="text-[18px] font-bold text-[#2B3674]">Team members</p>
-            <div className="flex size-[37px] bg-[#F4F7FE] items-center justify-center rounded-[10px]">
+            <button className="flex size-[37px] bg-[#F4F7FE] items-center justify-center rounded-[10px]">
               <img src={Add} alt="" />
-            </div>
+            </button>
           </div>
           <Info image={Avatar1} name="Adela Parkson" job="Creative Director" />
           <Info image={Avatar2} name="Christian Mad" job="Product Designer" />
@@ -509,8 +500,27 @@ const Dashboard = () => {
           </div>
         </div>
         {/* h5c4 */}
-        <div className="bg-white rounded-[20px] p-6">
-          <div className="bg-[url('./images/dashboard/bg.svg')] w-[343px] h-[185px]"></div>
+        <div className="bg-white rounded-[20px] px-5 py-6 flex flex-col ">
+          <div
+            className="relative bg-[url('./images/dashboard/bg.svg')] w-[343px] h-[185px] 
+            p-4 flex justify-end"
+          >
+            <button className="backdrop-blur-xl size-[43px] flex justify-center items-center rounded-2xl">
+              <img src={Watch} alt="" />
+            </button>
+            <div className="absolute bottom-[-25px] left-[4%]">
+              <img src={Starbuck} alt="" />
+            </div>
+          </div>
+          <div className="pt-12">
+            <p className="text-[24px] font-bold text-[#2B3674]">Starbucks</p>
+            <div className="flex gap-2 items-center">
+              <img src={Fastfood} alt="" />
+              <p className="text-[18px] font-medium text-[#A3AED0]">
+                10% cashback & off
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

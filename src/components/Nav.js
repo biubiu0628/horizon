@@ -6,15 +6,39 @@ import Kanban from "../images/nav/kanban.svg";
 import Profile from "../images/nav/profile.svg";
 import Block from "../images/nav/block.svg";
 import Vector from "../images/nav/Vector.svg";
+import { Link, useLocation } from "react-router-dom";
 
-const Button = ({ image, name }) => (
-  <button className="flex gap-3 h-[36px] items-center border-r-4 border-[#4318FF]">
-    <img src={image} alt="" />
-    <p className="text-[16px] text-[#A3AED0]">{name}</p>
-  </button>
-);
+const Button = ({ image, name, isActive, path }) => {
+  return (
+    <>
+      <Link to={path} className="flex h-[36px] items-center justify-between">
+        <div className="flex gap-3 items-center">
+          <img src={image} alt="" />
+          <p className="text-[16px] text-[#A3AED0]">{name}</p>
+        </div>
+        <div
+          id="border"
+          className={`w-1 h-9 bg-[#4318FF] rounded-full ${
+            isActive(path) ? "block" : "hidden"
+          }`}
+        ></div>
+      </Link>
+    </>
+  );
+};
 
 const Nav = () => {
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
+  const Buttons = [
+    { image: Home, name: "Dashboard", path: "/" },
+    { image: Market, name: "NFT Marketplace", path: "/market" },
+    { image: Tables, name: "Tables", path: "/tables" },
+    { image: Kanban, name: "Kanban" },
+    { image: Profile, name: "Profile" },
+    { image: Block, name: "Sign In" },
+  ];
   return (
     <div className="sticky bg-white h-[1152px] w-[290px] flex flex-col justify-between items-center rounded-br-3xl">
       <div>
@@ -23,12 +47,14 @@ const Nav = () => {
           <span>free</span>
         </p>
         <div className="flex flex-col gap-4 pl-8 pt-8">
-          <Button image={Home} name="Dashboard" />
-          <Button image={Market} name="NFT Marketplace" />
-          <Button image={Tables} name="Tables" />
-          <Button image={Kanban} name="Kanban" />
-          <Button image={Profile} name="Profile" />
-          <Button image={Block} name="Sign In" />
+          {Buttons.map((button) => (
+            <Button
+              image={button.image}
+              name={button.name}
+              isActive={isActive}
+              path={button.path}
+            />
+          ))}
         </div>
       </div>
       <div className="pb-4">
