@@ -35,9 +35,9 @@ const Nav = () => {
     { image: Home, name: "Dashboard", path: "/" },
     { image: Market, name: "NFT Marketplace", path: "/market" },
     { image: Tables, name: "Tables", path: "/tables" },
-    { image: Kanban, name: "Kanban" },
-    { image: Profile, name: "Profile" },
-    { image: Block, name: "Sign In" },
+    { image: Kanban, name: "Kanban", path: "/kanban" },
+    { image: Profile, name: "Profile", path: "/profile" },
+    { image: Block, name: "Sign In", path: "/signin" },
   ];
   return (
     <div className="sticky bg-white h-[1152px] w-[290px] flex flex-col justify-between items-center rounded-br-3xl">
