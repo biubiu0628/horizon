@@ -40,7 +40,7 @@ const Nav = () => {
     { image: Block, name: "Sign In", path: "/signin" },
   ];
   return (
-    <div className="sticky bg-white h-[1152px] w-[290px] flex flex-col justify-between items-center rounded-br-3xl">
+    <div className="hidden sticky bg-white h-[1152px] w-[290px] min-[800px]:flex flex-col justify-between items-center rounded-br-3xl">
       <div>
         <p className="w-[290px] uppercase text-[26px] text-[#2B3674] py-8 border-b-[1px] border-[#F4F7FE] text-center">
           <span className="font-bold">horizon </span>

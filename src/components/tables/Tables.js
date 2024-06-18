@@ -22,25 +22,25 @@ const Table = ({ name, children }) => (
     <table className="w-full">
       <thead>
         <tr className="border-b">
-          <th scope="col" className="pt-8 pl-5 pb-1">
+          <th scope="col" className="pt-3 min-[800px]:pt-8 pl-5 pb-1">
             <div className="flex text-[14px] font-medium text-[#A3AED0]">
               Title
               <img src={Down} alt="" className="" />
             </div>
           </th>
-          <th scope="col" className="pt-8">
+          <th scope="col" className="pt-3 min-[800px]:pt-8">
             <div className="flex text-[14px] font-medium text-[#A3AED0]">
               Title
               <img src={Down} alt="" className="" />
             </div>
           </th>
-          <th scope="col" className="pt-8">
+          <th scope="col" className="pt-3 min-[800px]:pt-8">
             <div className="flex text-[14px] font-medium text-[#A3AED0]">
               Title
               <img src={Down} alt="" className="" />
             </div>
           </th>
-          <th scope="col" className="pt-8">
+          <th scope="col" className="pt-3 min-[800px]:pt-8">
             <div className="flex text-[14px] font-medium text-[#A3AED0]">
               Title
               <img src={Down} alt="" className="" />
@@ -219,169 +219,171 @@ const Tables = () => {
   ];
 
   return (
-    <div className="grid grid-cols-[290px_1580px] bg-[#F4F7FE] gap-5">
-      <Nav />
-      <div>
-        <Header name="Tables" name2="Tables" />
-        <div className="grid grid-cols-2 grid-rows-[580px_345px] gap-2 pt-4">
-          <div className="bg-white rounded-[20px]">
-            <Table name="Development Table">
-              <BodyDevTable
-                name="Marketplace"
-                os1={Apple}
-                os2={Android}
-                os3={Windows}
-                date="12.Jan.2021"
-                percent="75.5"
-              />
-              <BodyDevTable
-                name="Venus DB PRO"
-                os1={Apple}
-                date="21.Feb.2021"
-                percent="35.4"
-              />
-              <BodyDevTable
-                name="Venus DS"
-                os1={Apple}
-                os2={Android}
-                os3={Windows}
-                date="13.Mar.2021"
-                percent="25"
-              />
-              <BodyDevTable
-                name="Venus 3D Asset"
-                os1={Apple}
-                os2={Windows}
-                date="24.Jan.2021"
-                percent="100"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-              <BodyDevTable
-                name="Uranus"
-                os1={Android}
-                os2={Windows}
-                date="21.Sep.2021"
-                percent="12.2"
-              />
-            </Table>
-          </div>
-          <div className="bg-white rounded-[20px]">
-            <Table name="Check Table">
-              {data.map((item, index) => (
+    <div className="flex bg-[#F4F7FE]">
+      <div className="grid min-[800px]:grid-cols-[290px_1580px] gap-5 bg-[#F4F7FE]">
+        <Nav />
+        <div>
+          <Header name="Tables" name2="Tables" />
+          <div className="grid min-[800px]:grid-cols-2 grid-rows-[580px_345px] gap-2 pt-4">
+            <div className="bg-white rounded-[20px]">
+              <Table name="Development Table">
+                <BodyDevTable
+                  name="Marketplace"
+                  os1={Apple}
+                  os2={Android}
+                  os3={Windows}
+                  date="12.Jan.2021"
+                  percent="75.5"
+                />
+                <BodyDevTable
+                  name="Venus DB PRO"
+                  os1={Apple}
+                  date="21.Feb.2021"
+                  percent="35.4"
+                />
+                <BodyDevTable
+                  name="Venus DS"
+                  os1={Apple}
+                  os2={Android}
+                  os3={Windows}
+                  date="13.Mar.2021"
+                  percent="25"
+                />
+                <BodyDevTable
+                  name="Venus 3D Asset"
+                  os1={Apple}
+                  os2={Windows}
+                  date="24.Jan.2021"
+                  percent="100"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+                <BodyDevTable
+                  name="Uranus"
+                  os1={Android}
+                  os2={Windows}
+                  date="21.Sep.2021"
+                  percent="12.2"
+                />
+              </Table>
+            </div>
+            <div className="bg-white rounded-[20px]">
+              <Table name="Check Table">
+                {data.map((item, index) => (
+                  <BodyCheckTable
+                    key={index}
+                    name={item.name}
+                    percent={item.percent}
+                    number={item.number}
+                    date={item.date}
+                  />
+                ))}
                 <BodyCheckTable
-                  key={index}
-                  name={item.name}
-                  percent={item.percent}
-                  number={item.number}
-                  date={item.date}
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
                 />
-              ))}
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-              <BodyCheckTable
-                name="Venus 3D Asset"
-                percent="12.2"
-                number="258"
-                date="17.Dec.2021"
-              />
-            </Table>
-          </div>
-          <div className="bg-white rounded-[20px]">
-            <Table name="4-Column Table">
-              {data.map((item) => (
-                <BodyColumnTable
-                  name={item.name}
-                  percent={item.percent}
-                  number={item.number}
-                  date={item.date}
+                <BodyCheckTable
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
                 />
-              ))}
-            </Table>
-          </div>
-          <div className="bg-white rounded-[20px]">
-            <Table name="Complex Table">
-              {complex.map((item) => (
-                <BodyComplexTable
-                  name={item.name}
-                  image={item.image}
-                  status={item.status}
-                  date={item.date}
-                  percent={item.percent}
+                <BodyCheckTable
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
                 />
-              ))}
-            </Table>
+                <BodyCheckTable
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
+                />
+                <BodyCheckTable
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
+                />
+                <BodyCheckTable
+                  name="Venus 3D Asset"
+                  percent="12.2"
+                  number="258"
+                  date="17.Dec.2021"
+                />
+              </Table>
+            </div>
+            <div className="bg-white rounded-[20px]">
+              <Table name="4-Column Table">
+                {data.map((item) => (
+                  <BodyColumnTable
+                    name={item.name}
+                    percent={item.percent}
+                    number={item.number}
+                    date={item.date}
+                  />
+                ))}
+              </Table>
+            </div>
+            <div className="bg-white rounded-[20px]">
+              <Table name="Complex Table">
+                {complex.map((item) => (
+                  <BodyComplexTable
+                    name={item.name}
+                    image={item.image}
+                    status={item.status}
+                    date={item.date}
+                    percent={item.percent}
+                  />
+                ))}
+              </Table>
+            </div>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
