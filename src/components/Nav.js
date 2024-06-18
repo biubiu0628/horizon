@@ -39,6 +39,7 @@ const Nav = () => {
     { image: Profile, name: "Profile", path: "/profile" },
     { image: Block, name: "Sign In", path: "/signin" },
   ];
+
   return (
     <div className="hidden sticky bg-white h-[1152px] w-[290px] min-[800px]:flex flex-col justify-between items-center rounded-br-3xl">
       <div>

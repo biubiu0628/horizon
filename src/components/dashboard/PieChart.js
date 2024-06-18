@@ -27,7 +27,7 @@ const PieChart = () => {
       />
       <div
         id="legend"
-        className="w-[300px] h-[75px] shadow place-self-center rounded-[15px] grid grid-cols-3 items-center px-2"
+        className="w-full h-[75px] shadow place-self-center rounded-[15px] grid grid-cols-3 items-center px-2"
       >
         {options.labels.map((label, index) => (
           <div

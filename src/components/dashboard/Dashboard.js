@@ -101,7 +101,7 @@ const Task = ({ nameTask }) => {
 };
 
 const Info = ({ image, name, job }) => (
-  <div className="flex justify-between items-center w-[336px] h-[70px] p-4 shadow-md mt-4 rounded-2xl">
+  <div className="flex justify-between items-center w-full h-[70px] p-4 shadow-md mt-4 rounded-2xl">
     <div className="flex gap-4 items-center">
       <img src={image} alt="" />
       <p className="grid">
@@ -116,12 +116,15 @@ const Info = ({ image, name, job }) => (
 const Dashboard = () => {
   return (
     <div className="flex bg-[#F4F7FE]">
-      <div className="grid grid-cols-1 min-[800px]:grid-cols-[290px_1580px] bg-[#F4F7FE] gap-5">
+      <div className="grid min-[800px]:grid-cols-[290px_1580px] bg-[#F4F7FE] gap-5">
         <Nav />
         <div>
           {/* header */}
           <Header name="Dashboard" name2="Main Dashboard" />
-          <div className="grid min-[800px]:grid-cols-[repeat(4,24.6%)] min-[800px]:grid-rows-[97px_repeat(4,345px)] py-4 gap-2">
+          <div
+            className="grid grid-cols-2 min-[800px]:grid-cols-[repeat(4,24.6%)] 
+            min-[800px]:grid-rows-[97px_repeat(4,23%)] py-4 gap-2"
+          >
             {/* h1c1 */}
             <div className="grid grid-cols-3 gap-2 col-span-2">
               {/* 1 */}
@@ -155,8 +158,8 @@ const Dashboard = () => {
                 </p>
               </div>
               {/* 3 */}
-              <div className="bg-white rounded-[20px] flex items-center pl-4">
-                <p className="flex flex-col">
+              <div className="bg-white rounded-[20px] flex items-center">
+                <p className="flex flex-col px-4">
                   <span className="text-[14px] text-[#A3AED0]">Sales</span>
                   <span className="text-[24px] font-bold text-[#2B3674]">
                     $574.34
@@ -171,8 +174,8 @@ const Dashboard = () => {
             {/* h1c2 */}
             <div className="grid grid-cols-3 gap-2 col-span-2">
               {/* 1 */}
-              <div className="bg-white rounded-[20px] flex items-center justify-between px-4">
-                <div>
+              <div className="bg-white rounded-[20px] flex items-center justify-between">
+                <div className="px-4 py-2">
                   <p className="flex flex-col">
                     <span className="text-[14px] text-[#A3AED0]">
                       Your balance
@@ -226,7 +229,7 @@ const Dashboard = () => {
               className="bg-white rounded-[20px] grid min-[800px]:grid-cols-[20%_80%] 
               p-6 col-span-2"
             >
-              <div className="flex min-[800px]:flex-col items-center justify-between min-[800px]:justify-start">
+              <div className="flex min-[800px]:flex-col items-center justify-between min-[800px]:justify-start min-[800px]:items-start">
                 <div className="flex bg-[#F4F7FE] w-[123px] h-[37px] p-2 rounded-[7px] gap-2 justify-center">
                   <img src={CalendarImage} alt="" />
                   <p className="text-[14px] text-[#A3AED0]">This month</p>
@@ -256,9 +259,7 @@ const Dashboard = () => {
                     <img src={Stat} alt="" className="size-[24px]" />
                   </div>
                 </div>
-                <div className="flex justify-center items-center">
-                  <AreaChart />
-                </div>
+                <AreaChart />
               </div>
             </div>
             {/* h2c2 */}
@@ -271,14 +272,12 @@ const Dashboard = () => {
                   <img src={Stat} alt="" className="size-[24px]" />
                 </div>
               </div>
-              <div className="flex justify-center items-center">
-                <ColumnChart />
-              </div>
+              <ColumnChart />
             </div>
             {/* h3c1 */}
             <div
               className="bg-white rounded-[20px] grid 
-          grid-rows-[15%_85%] p-6 col-span-2"
+              grid-rows-[15%_85%] p-6 col-span-2"
             >
               <div className="flex justify-between items-center">
                 <p className="text-[24px] font-bold text-[#2B3674]">
@@ -529,7 +528,7 @@ const Dashboard = () => {
                     Discover our cards benefits, with one tap.
                   </span>
                 </p>
-                <button className="w-[340px] h-[46px] bg-[#4318FF] text-white rounded-2xl mt-8">
+                <button className="w-full h-[46px] bg-[#4318FF] text-white rounded-2xl mt-8">
                   Cards
                 </button>
               </div>
@@ -537,8 +536,8 @@ const Dashboard = () => {
             {/* h5c4 */}
             <div className="bg-white rounded-[20px] px-5 py-6 flex flex-col ">
               <div
-                className="relative bg-[url('./images/dashboard/bg.svg')] w-[343px] h-[185px] 
-            p-4 flex justify-end"
+                className="relative bg-[url('./images/dashboard/bg.svg')] w-full h-[185px] 
+                p-4 flex justify-end bg-cover rounded-[20px]"
               >
                 <button className="backdrop-blur-xl size-[43px] flex justify-center items-center rounded-2xl">
                   <img src={Watch} alt="" />

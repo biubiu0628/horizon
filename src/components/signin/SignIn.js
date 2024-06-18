@@ -7,7 +7,7 @@ import Horizon from "../../images/signin/horizon.svg";
 
 const SignIn = () => {
   return (
-    <div className="grid grid-cols-[50%_50%]">
+    <div className="min-[800px]:grid min-[800px]:grid-cols-[60%_40%] flex flex-col-reverse">
       <div className="flex flex-col justify-between items-center">
         <Link to="/" className="flex items-center py-8 w-[500px]">
           <img src={Back} alt="" />
@@ -15,6 +15,7 @@ const SignIn = () => {
             Back to dashboard
           </p>
         </Link>
+        {/* signin */}
         <div className="w-[500px]">
           <p className="flex flex-col pb-6">
             <span className="text-[36px] font-bold text-[#2B3674]">
@@ -67,10 +68,10 @@ const SignIn = () => {
                 <input
                   type="password"
                   placeholder="Min. 8 characters"
-                  className=" focus:outline-none text-[14px]"
+                  className=" focus:outline-none text-[14px] w-full"
                   required
                 />
-                <img src={Eye} alt="" className="cursor-pointer" />
+                <img src={Eye} alt="" className="cursor-pointer pl-4" />
               </label>
             </div>
           </div>
@@ -100,14 +101,18 @@ const SignIn = () => {
           © 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!
         </p>
       </div>
-      <div className="bg-[url('images/signin/bg.svg')] h-screen rounded-bl-[200px] flex items-center justify-center">
-        <div className="w-[471px] h-[550px] flex flex-col justify-between">
-          <div className="flex items-center justify-center">
+      {/* logo */}
+      <div
+        className="bg-[url('images/signin/bg.svg')] min-[800px]:h-screen min-[800px]:rounded-bl-[200px] 
+        max-[799px]:rounded-b-[200px] flex items-center justify-center"
+      >
+        <div className="flex flex-col justify-between items-center gap-8 h-full">
+          <div className="flex items-center justify-center min-[800px]:pt-28 py-10">
             <img src={Horizon} alt="" className="w-[280px] h-[375px]" />
           </div>
           <div
-            className="w-[471px] h-[134px] rounded-[25px] flex items-center 
-            justify-center border-2 border-solid border-white "
+            className="w-100% h-[134px] rounded-[25px] min-[800px]:flex items-center 
+            justify-center border-2 border-solid border-white hidden px-12"
           >
             <p className="text-white flex flex-col text-center">
               <span className="text-[20px]">
@@ -115,6 +120,12 @@ const SignIn = () => {
               </span>
               <span className="text-[30px] font-bold">horizon-ui.com</span>
             </p>
+          </div>
+          <div className="min-[800px]:flex gap-8 items-center text-white text-[14px] font-medium py-8 hidden">
+            <p>Marketplace</p>
+            <p>License</p>
+            <p>Terms of Use</p>
+            <p>Blog</p>
           </div>
         </div>
       </div>

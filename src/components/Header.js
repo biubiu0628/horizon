@@ -10,10 +10,20 @@ const Header = ({ name, name2 }) => {
     <div className="flex w-full justify-between items-end pt-8 px-4 min-[800px]:px-0">
       {/* title */}
       <div className="col-span-2 flex gap-2 items-end">
-        <button class="group flex size-[66px] cursor-pointer items-center justify-center rounded-3xl bg-white p-2 focus:bg-slate-200 min-[800px]:hidden">
-          <div class="space-y-2">
-            <span class="block h-1 w-10 origin-center rounded-full bg-[#2B3674] transition-transform ease-in-out group-focus:translate-y-1.5 group-focus:rotate-45"></span>
-            <span class="block h-1 w-8 origin-center rounded-full bg-orange-500 transition-transform ease-in-out group-focus:w-10 group-focus:-translate-y-1.5 group-focus:-rotate-45"></span>
+        {/* menu */}
+        <button
+          className="group flex size-[66px] cursor-pointer items-center justify-center 
+            rounded-3xl bg-white p-2 focus:bg-slate-200 min-[800px]:hidden"
+        >
+          <div className="space-y-2">
+            <span
+              className="block h-1 w-10 origin-center rounded-full bg-[#2B3674] transition-transform 
+              ease-in-out group-focus:translate-y-1.5 group-focus:rotate-45"
+            ></span>
+            <span
+              className="block h-1 w-8 origin-center rounded-full bg-orange-500 transition-transform 
+              ease-in-out group-focus:w-10 group-focus:-translate-y-1.5 group-focus:-rotate-45"
+            ></span>
           </div>
         </button>
         <p className="flex flex-col">

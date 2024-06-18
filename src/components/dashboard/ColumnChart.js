@@ -63,7 +63,7 @@ const AreaChart = () => {
             options={options}
             series={series}
             type="bar"
-            width="742"
+            width="100%"
             height="250"
           />
         </div>

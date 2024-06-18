@@ -195,7 +195,7 @@ const Market = () => {
             </div>
           </div>
           {/* market */}
-          <div className="grid min-[800px]:grid-cols-3 py-4 gap-4">
+          <div className="grid min-[800px]:grid-cols-3 py-4 gap-4 px-4">
             <div className="grid col-span-2">
               {/* discover */}
               <div className="bg-[url('./images/market/bgmarket.svg')] h-[350px] rounded-[20px] p-12">
